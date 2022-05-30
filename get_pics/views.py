@@ -25,6 +25,22 @@ def addPicture(request):
     if request.method == 'POST':
        data = request.POST
        image = request.FILES.get('image')
+       
+    if data['category'] != 'none':
+            category = Category.objects.get(id=data['category'])
+    elif data['category_new'] !='':
+            category,created =  Category.objects.get_or_create(name=data['category_new'])  
+            
+    else: 
+            category = None   
+            
+    image = Pictures.objects.create(
+            category=category,
+            description=data['description'],
+            image=image,
+        )     
+    
+
     
     
     context = {'categories': categories}
