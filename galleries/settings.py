@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'get_pics.apps.GetPicsConfig'
 ]
 
 MIDDLEWARE = [
@@ -81,7 +82,16 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+# DATABASE = {
+#     'default': {
+#         'ENGINE':'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'dbpi99ei646vfg',
+#         'USER': 'fpsucbsxlrbzdn',
+#         'PASSWORD':'30418cd6403000801da8880fd7a47459367cf4428ac8120fbdc908a0f62678fb',
+#         'HOST': 'ec2-34-231-221-151.compute-1.amazonaws.com',
+#         'PORT':'5432',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators

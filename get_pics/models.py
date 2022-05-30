@@ -1,5 +1,4 @@
-from contextlib import nullcontext
-from unicodedata import category, name
+
 from django.db import models
 
 # Create your models here.
@@ -13,9 +12,10 @@ class Category(models.Model):
       
 class Pictures(models.Model):
     
-    category = models.ForeignKey(category,on_delete=models.SET_NULL)
+    category = models.ForeignKey(
+        Category,on_delete=models.SET_NULL,null=True)
     image = models.ImageField(null=False,blank=False)
-    description = models.CharField(max_length = 300, null= False,blank = False)
+    description = models.TextField()
     
     def __str__(self):
           return self.description
