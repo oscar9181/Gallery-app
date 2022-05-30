@@ -9,6 +9,12 @@
       rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" 
       crossorigin="anonymous">
     <title>Document</title>
+
+<style>
+    .image{
+        height: 200px;
+    }
+</style>
 </head>
 
 
@@ -36,14 +42,49 @@
 
             <div class="col-md-9">
                 <div class="row">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://images.unsplash.com/photo-1514923995763-768e52f5af87?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGlzcGxheXxlbnwwfHwwfHw%3D&w=1000&q=80" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <p>Category:Air Parachute</p>
+               
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class='image'
+                            src="https://images.unsplash.com/photo-1514923995763-768e52f5af87?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGlzcGxheXxlbnwwfHwwfHw%3D&w=1000&q=80" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <small>Category:Air Parachute</small>
+                            </div>
+                            <a class="btn btn-outline-dark btn-sm m-1">View</a>
+                          </div>
                     </div>
-                    <a class="btn btn-outline-dark btn-sm m-1">View</a>
-                  </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class='image'
+                            src="https://images.unsplash.com/photo-1514923995763-768e52f5af87?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGlzcGxheXxlbnwwfHwwfHw%3D&w=1000&q=80" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <small>Category:Air Parachute</small>
+                            </div>
+                            <a href="{% url 'album' 5 %}" class="btn btn-outline-dark btn-sm m-1">View</a>
+                          </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class='image'
+                            src="https://images.unsplash.com/photo-1514923995763-768e52f5af87?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGlzcGxheXxlbnwwfHwwfHw%3D&w=1000&q=80" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <small>Category:Air Parachute</small>
+                            </div>
+                            <a href="{% url 'album' 5 %}" class="btn btn-outline-dark btn-sm m-1">View</a>
+                          </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class='image'
+                            src="https://images.unsplash.com/photo-1514923995763-768e52f5af87?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGlzcGxheXxlbnwwfHwwfHw%3D&w=1000&q=80" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <small>Category:Air Parachute</small>
+                            </div>
+                            <a href="{% url 'album' 5 %}" class="btn btn-outline-dark btn-sm m-1">View</a>
+                          </div>
+                    </div>
                 </div>
+                
             </div>
 
         </div>
