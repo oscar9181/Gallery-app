@@ -10,13 +10,14 @@ from.models import Category,Pictures
 
 def home(request):
     categories = Category.objects.all()
-    picture = Pictures .objects.all()
+    pictures = Pictures .objects.all()
     
-    context = {'categories': categories,'pictures':picture}
+    context = {'categories': categories,'pictures':pictures}
     return render(request, 'pictures/home.html',context)
      
 def viewPicture(request,pk):
-    return render(request,'pictures/display.html')
+    album = Pictures .objects.get(id=pk)
+    return render(request,'pictures/display.html',{'album' : album})
 
 def addPicture(request):
-    return render(request,'picture/add.html')
+    return render(request,'pictures/add.html')

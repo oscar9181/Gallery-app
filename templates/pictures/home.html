@@ -48,47 +48,19 @@
 
             <div class="col-md-9">
                 <div class="row">
-               
+               {% for picture in pictures %}
                     <div class="col-md-4">
                         <div class="card">
-                            <img class='image'
-                            src="https://images.unsplash.com/photo-1514923995763-768e52f5af87?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGlzcGxheXxlbnwwfHwwfHw%3D&w=1000&q=80" class="card-img-top" alt="...">
+                            <img class='image'src={{picture.image.url}}>
                             <div class="card-body">
-                              <small>Category:Air Parachute</small>
+                              <small>{{ picture.category.name }}</small>
                             </div>
-                            <a class="btn btn-outline-dark btn-sm m-1">View</a>
+                            <a href="{% url 'album' picture.id %}" class="btn btn-outline-dark btn-sm m-1">View</a>
                           </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img class='image'
-                            src="https://images.unsplash.com/photo-1514923995763-768e52f5af87?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGlzcGxheXxlbnwwfHwwfHw%3D&w=1000&q=80" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <small>Category:Air Parachute</small>
-                            </div>
-                            <a href="{% url 'album' 5 %}" class="btn btn-outline-dark btn-sm m-1">View</a>
-                          </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img class='image'
-                            src="https://images.unsplash.com/photo-1514923995763-768e52f5af87?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGlzcGxheXxlbnwwfHwwfHw%3D&w=1000&q=80" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <small>Category:Air Parachute</small>
-                            </div>
-                            <a href="{% url 'album' 5 %}" class="btn btn-outline-dark btn-sm m-1">View</a>
-                          </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img class='image'
-                            src="https://images.unsplash.com/photo-1514923995763-768e52f5af87?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGlzcGxheXxlbnwwfHwwfHw%3D&w=1000&q=80" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <small>Category:Air Parachute</small>
-                            </div>
-                            <a href="{% url 'album' 5 %}" class="btn btn-outline-dark btn-sm m-1">View</a>
-                          </div>
-                    </div>
+                    {% empty %}
+                    <h1>No Pictures</h1>
+                    {% endfor %}
                 </div>
                 
             </div>
