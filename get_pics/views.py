@@ -20,4 +20,7 @@ def viewPicture(request,pk):
     return render(request,'pictures/display.html',{'album' : album})
 
 def addPicture(request):
-    return render(request,'pictures/add.html')
+    categories = Category.objects.all()
+    
+    context = {'categories': categories}
+    return render(request,'pictures/add.html',context)
