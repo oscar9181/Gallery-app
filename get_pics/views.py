@@ -1,4 +1,5 @@
 from django.shortcuts import render,redirect
+from.models import Category,Pictures
 
 # Create your views here.
 
@@ -8,10 +9,14 @@ from django.shortcuts import render,redirect
 
 
 def home(request):
-    return render(request, 'pictures/home.html')
-
+    categories = Category.objects.all()
+    picture = Pictures .objects.all()
+    
+    context = {'categories': categories,'pictures':picture}
+    return render(request, 'pictures/home.html',context)
+     
 def viewPicture(request,pk):
     return render(request,'pictures/display.html')
 
 def addPicture(request):
-    return render(request,'pictures/add.html')
+    return render(request,'picture/add.html')
