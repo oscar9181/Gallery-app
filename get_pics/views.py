@@ -22,5 +22,10 @@ def viewPicture(request,pk):
 def addPicture(request):
     categories = Category.objects.all()
     
+    if request.method == 'POST':
+       data = request.POST
+       image = request.FILES.get('image')
+    
+    
     context = {'categories': categories}
     return render(request,'pictures/add.html',context)
