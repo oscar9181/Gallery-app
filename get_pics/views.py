@@ -26,4 +26,4 @@ def searchPicture(request):
         'image': picture,
         'title':'search photos'
     }
-    return render(request, 'pictures/search.html', context)
+    return render(request, 'pictures/search.html',context)

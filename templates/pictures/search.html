@@ -12,21 +12,22 @@
 <body class="m-5">
     <div class="row">
         <h2 class="border-bottom">SEARCH PAGE</h2>
-      {% for picture in pictures %}
-      <div class="col-md-4">
+
+        {% for picture in pictures %}
+        <div class="col-md-4">
             <div class="card my-2">
-                <img style='height: 250px;object-fit:cover;' src="{{picture.image.url}}" class="card-img-top" alt="photo image">
+                <img style='height: 200px;object-fit:cover;' src="{{ picture.image.url }}" class="card-img-top" alt="image">
                 <div class="card-body">
-                  <p class="card-text">Category: {{picture.category.name}}</p>
+                  <p class="card-text">Category: {{ picture.category.name }}</p>
                 </div>
-                <button type="button" class="btn btn-success mt-1 copy-btn"
-                    data-url="{% url 'album' picture.id %}">copy image url</button>
+                <button type="album" class="btn btn-success mt-1 copy-btn"
+                    data-url="{% url 'alabum' picture.id %}">copy image url</button>
                 <a href="{% url 'album' picture.id %}" class="btn btn-outline-dark btn-sm">view</a>
             </div>
-      </div>
-      {% empty %}
-        <h3>No such category in the category data... Kindly  try all</h3>
-      {% endfor %}
+        </div>
+        {% empty %}
+        <h3>No category in the database</h3>
+        {%endfor%}
     </div>
 </body>
 </html>

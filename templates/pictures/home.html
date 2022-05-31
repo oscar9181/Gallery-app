@@ -38,7 +38,7 @@
                     <div class="col-md-4">
                         <div class="card">
                             {% if picture.image %}
-                            <img src="{{ picture.image.url }}">
+                            <img class="image-thumbail" src="{{ picture.image.url }}">
                         {% endif %}
                    
                             <div class="card-body">
@@ -56,18 +56,7 @@
 
         </div>
     </div>
-    <script>
-        console.log('hello')
-        const images = document.querySelectorAll('image')
-        for (let i of images) {
-            console.log(i.src)
-            if (i.src) 
-            {console.log('found')}
-            else{
-                console.log(' not found')
-            }
-        }
-    </script>
+    
 
 
 </body>  
