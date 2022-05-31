@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,7 +53,10 @@
                {% for picture in pictures %}
                     <div class="col-md-4">
                         <div class="card">
-                            <img class='image'src={{picture.image.url}}>
+                            {% if picture.image %}
+                            <img src="{{ picture.image.url }}">
+                        {% endif %}
+                   
                             <div class="card-body">
                               <small>{{ picture.category.name }}</small>
                             </div>
@@ -67,7 +72,18 @@
 
         </div>
     </div>
-
+    <script>
+        console.log('hello')
+        const images = document.querySelectorAll('image')
+        for (let i of images) {
+            console.log(i.src)
+            if (i.src) 
+            {console.log('found')}
+            else{
+                console.log(' not found')
+            }
+        }
+    </script>
 
 
 </body>  
