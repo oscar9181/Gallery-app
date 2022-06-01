@@ -15,7 +15,6 @@ This is Python gallery application that is used to view image and search for cat
 
 
 ### Technologies Used
-
 * HTML
 * CSS
 * Bootstrap5
