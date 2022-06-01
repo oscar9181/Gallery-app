@@ -3,12 +3,16 @@ from.models import Category,Pictures
 
 
 def home(request):
+    
+    category = request.GET.get('category')
+    if category == None:
+        pictures = Pictures.objects.all()
+    else:
+        pictures = Pictures.objects.filter(category__name=category)
+        
+        
     categories = Category.objects.all()
-    pictures = Pictures .objects.all()
-    img_url = []
-    for p in pictures:
-        img_url.append(p.image)
-    print(img_url)
+    
     
     context = {'categories': categories,'pictures':pictures}
     return render(request, 'pictures/home.html',context)
@@ -21,9 +25,9 @@ def viewPicture(request,pk):
 def searchPicture(request):
     query = request.GET.get('query')
     if query != None:
-        picture = Pictures.objects.filter(category__name=query)
+        pictures = Pictures.objects.filter(category__name=query)
     context = {
-        'image': picture,
-        'title':'search photos'
+        'pictures': pictures,
+        'title':'search pictures'
     }
-    return render(request, 'pictures/search.html',context)
+    return render(request, 'pictures/search.html', context)
