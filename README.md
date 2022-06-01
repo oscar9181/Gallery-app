@@ -18,7 +18,7 @@ This is Python gallery application that is used to view image and search for cat
 
 * HTML
 * CSS
-* Bootstrap
+* Bootstrap5
 * Python
 * Django
 
@@ -27,6 +27,7 @@ This is Python gallery application that is used to view image and search for cat
 
 # License
  MIT License
+
 
 Copyright (c) [2022] [Oscar Okola]
 
