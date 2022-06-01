@@ -10,7 +10,7 @@ This is Python gallery application that is used to view image and search for cat
    + View different photos that interest me.
    + Click on a single photo to expand it and also view the details of the photo.
    + Search for different categories of photos. (ie. Travel, Food)
-   +.Copy a link to the photo to share with my friends.
+   + Copy a link to the photo to share with my friends.
 
 
 
