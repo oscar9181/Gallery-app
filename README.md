@@ -7,10 +7,10 @@ This is Python gallery application that is used to view image and search for cat
 
 #### User stories
   ##### As a user:
-   1.View different photos that interest me.
-   2.Click on a single photo to expand it and also view the details of the photo.
-   3.Search for different categories of photos. (ie. Travel, Food)
-   4.Copy a link to the photo to share with my friends.
+   + View different photos that interest me.
+   + Click on a single photo to expand it and also view the details of the photo.
+   + Search for different categories of photos. (ie. Travel, Food)
+   +.Copy a link to the photo to share with my friends.
 
 
 
@@ -18,7 +18,7 @@ This is Python gallery application that is used to view image and search for cat
 
 * HTML
 * CSS
-*Bootstrap
+* Bootstrap
 * Python
 * Django
 
